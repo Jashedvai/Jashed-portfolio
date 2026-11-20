@@ -1,0 +1,6 @@
+{
+  "name": "Jashed — Student Portfolio & Personal Works",
+  "description": "Interactive portfolio of Md. Ahsanul Haque Jashed showcasing Computer Science student projects, academic achievements, and a personal creative coding gallery with smooth parallax scrolling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

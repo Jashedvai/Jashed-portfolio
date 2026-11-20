@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-matrix: "Doto", "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --bg-obsidian: #241108;
+  --bg-espresso: #3e1f0f;
+  --bg-pearl: #fff1e8;
+  --text-alabaster: #fff1e8;
+  --text-ink: #3e1f0f;
+  --accent-bronze: #9a5a2e;
+  --accent-copper: #d39a6a;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: var(--bg-pearl);
+    color: var(--text-ink);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* Precision Apple-Engineering CAD Grid & Optical Dot-Matrix Utilities (Burnished Copper) */
+.bg-cad-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(62, 31, 15, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(62, 31, 15, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-cad-dots-light {
+  background-image: radial-gradient(rgba(154, 90, 46, 0.16) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-cad-dots-dark {
+  background-image: radial-gradient(rgba(211, 154, 106, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
