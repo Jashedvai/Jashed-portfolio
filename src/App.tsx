@@ -5,6 +5,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { AnimatePresence, MotionConfig } from 'motion/react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { ParallaxHero } from './components/ParallaxHero';
 import { AboutParallaxSection } from './components/AboutParallaxSection';
@@ -118,6 +119,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
+      <Analytics />
       <ScrollProgressBar />
       <TouchableSurfaceMouse />
       <AnimatePresence mode="wait">
